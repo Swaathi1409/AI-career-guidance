@@ -14,6 +14,13 @@ from typing import Dict, List, Tuple, Any
 import re
 from spacy.matcher import Matcher
 
+import os
+try:
+    nlp = spacy.load("en_core_web_lg")
+except OSError:
+    os.system("python -m spacy download en_core_web_lg")
+    nlp = spacy.load("en_core_web_lg")
+
 # Load spaCy model
 @st.cache_resource
 def load_nlp_model():
