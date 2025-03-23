@@ -1,4 +1,6 @@
 import streamlit as st
+st.set_page_config(page_title="AI Career Assistant", page_icon="💼")
+
 import spacy
 import fitz
 import docx
@@ -626,7 +628,6 @@ def show_enhanced_career_chat():
         st.rerun()
 
 def main():
-    st.set_page_config(page_title="AI Career Assistant", page_icon="💼", layout="wide")
 
     # Add API Key Configuration to sidebar
     st.sidebar.title("Configuration")
