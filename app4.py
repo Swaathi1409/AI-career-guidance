@@ -20,9 +20,13 @@ def load_nlp_model():
     try:
         return spacy.load("en_core_web_lg")
     except:
-        st.error("Please install spaCy model: python -m spacy download en_core_web_lg")
-        return None
-
+        # Show a progress message
+        with st.spinner("Downloading spaCy model (this may take a few minutes)..."):
+            # Run the download command
+            import subprocess
+            subprocess.check_call([sys.executable, "-m", "spacy", "download", "en_core_web_lg"])
+        # Try loading again after download
+        return spacy.load("en_core_web_lg")
 nlp = load_nlp_model()
 
 class EnhancedResumeParser:
