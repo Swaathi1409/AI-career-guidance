@@ -53,3 +53,8 @@ This project is an AI-powered career guidance system designed to optimize job ma
    ```
 4. Install and enable the Chrome extension for resume downloads.
 
+## Contributors
+1. Swaathi B
+2. Vaishnavi J
+3. Pradeepaa M
+4. Shravya K
